@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : stings.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Resources for Strings
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<resources>
+
+    <string name="app_name">byteThat</string>
+    <string name="ListofSoundBoards">ListofSoundBoards</string>
+    <string name="SoundBoard1">SoundBoard1</string>
+    <string name="SoundBoard2">SoundBoard2</string>
+    <string name="SoundBoard3">SoundBoard3</string>
+    <string name="SoundBoard4">SoundBoard4</string>
+    <string name="CreateNewSoundBoard">CreateNewSoundBoard</string>
+    <string name="NameOfSoundBoard">NameOfSoundBoard</string>
+    <string name="Sound1">Sound1</string>
+    <string name="Sound2">Sound2</string>
+    <string name="Sound3">Sound3</string>
+    <string name="Sound4">Sound4</string>
+    <string name="MySoundBoards">My SoundBoards</string>
+    <string name="noSoundBoardButton">Create My First SoundBoard!</string>
+    <string name="CreateSoundBoard">Create a new Sound Board</string>
+    <color name="white">#000000</color>
+    <string name="soundboard_banner_ad_unit_id">ca-app-pub-3057749752423169~4707673732</string>
+
+</resources>

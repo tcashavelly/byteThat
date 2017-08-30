@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : main_toprowtest.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        ***Not currently implemented
+        Top Row placeholder for label
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/listviewtextview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="30px"
+        android:text="byteThat">
+
+    </TextView>
+
+</LinearLayout>
+    
+

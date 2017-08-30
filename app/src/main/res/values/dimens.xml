@@ -1,0 +1,17 @@
+<resources>
+
+    <!--
+    Document   : dimens.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Resources for margins
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

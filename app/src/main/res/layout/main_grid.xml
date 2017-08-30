@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : main_grid.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Grid for main page displaying soundboards
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/soundboardgrid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:numColumns="1"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:columnWidth="90dp"
+    android:gravity="center" />

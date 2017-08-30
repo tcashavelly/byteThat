@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : soundboard_edit.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+            Layout for screen for editing/recording sounds within a soundboard
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <Button
+        android:id="@+id/overwriteSoundButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dip"
+        android:text="Record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/cancelSoundOverwriteButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dip"
+        android:text="Cancel"
+        android:layout_alignBottom="@+id/overwriteSoundButton"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+</RelativeLayout>

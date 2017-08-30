@@ -1,0 +1,22 @@
+<resources>
+
+    <!--
+    Document   : styles.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Resources for styles
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>

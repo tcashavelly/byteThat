@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "844366279716",
+    "firebase_url": "https://bytethat-df25f.firebaseio.com",
+    "project_id": "bytethat-df25f",
+    "storage_bucket": "bytethat-df25f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844366279716:android:20180aec6c580244",
+        "android_client_info": {
+          "package_name": "com.bytethat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844366279716-mk8657q6rmkscobl70d0aop2buu029go.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bytethat",
+            "certificate_hash": "da22fe27c7878d1695f6387f179f45b362895956"
+          }
+        },
+        {
+          "client_id": "844366279716-kokj019mqdtmrjqoggj1mfl9eg6ig3op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqxl5GqG7YtLG9Y7c2rG3sCPJoNlDemdI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844366279716-kokj019mqdtmrjqoggj1mfl9eg6ig3op.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

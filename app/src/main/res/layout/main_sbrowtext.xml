@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : main_sbrowtext.xml   Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Row for main view
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/soundboardrow"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+    android:textSize="40sp"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:padding="10dp"
+    android:overScrollFooter="@null"
+    android:shadowColor="#6E5621"
+    android:shadowDx="3.0"
+    android:shadowDy="3.0"
+    android:shadowRadius="10"></TextView>

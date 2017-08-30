@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Document   : soundboard_edit.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+            Layout for screen for editing/recording sounds within a soundboard
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <LinearLayout
+        android:id="@+id/soundboardedittopline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/textfieldcreatesoundboardname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="0.98"/>
+
+    <ImageView
+        android:id="@+id/photoChooseIcon"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.22"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteSoundBoardButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/soundboardedittopline"
+        android:layout_centerInParent="true"
+        android:text="Delete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/saveeditSoundBoardButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/soundboardedittopline"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:text="Save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/canceleditSoundBoardButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/soundboardedittopline"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:text="Cancel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+
+</RelativeLayout>

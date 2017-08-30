@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : sound_create.xml
+    Created on : March 16, 2012, 5:39 PM
+    Author     : Tom
+    Description:
+        Layout for screen for recording sounds within a soundboard
+
+    Copyright 2017 Thomas Cashavelly
+    All Rights Reserved
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/createSoundLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true" >
+
+    <EditText
+        android:id="@+id/soundNameTextBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:inputType="textCapSentences"
+        android:background="@android:drawable/editbox_background"
+        android:layout_alignStart="@+id/cancelSoundButton"
+        android:layout_alignParentTop="true" />
+
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+         />
+
+    <ImageButton
+        android:id="@+id/recordButton"
+        android:layout_width="2500dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/soundNameTextBox"
+        android:layout_toEndOf="@+id/cancelSoundButton"
+       />
+
+    <Button
+        android:id="@+id/saveSoundButton"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dip"
+        android:text="Save"
+        android:layout_alignTop="@+id/cancelSoundButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    <Button
+        android:id="@+id/cancelSoundButton"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dip"
+        android:text="Cancel"
+        android:layout_marginTop="64dp"
+        android:layout_below="@+id/recordButton"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+</RelativeLayout>
