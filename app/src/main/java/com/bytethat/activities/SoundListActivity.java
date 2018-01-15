@@ -12,9 +12,11 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.ExifInterface;
 import android.os.Bundle;
 
 import com.bytethat.Manifest;
@@ -30,6 +32,7 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -54,6 +57,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static com.bytethat.adaptors.ImageUtilities.rotateBitmap;
 
 /**
  * @author Tom
@@ -166,11 +171,14 @@ public class SoundListActivity extends Activity {
     }
 
     public void drawBackground() {
-        if (this.currentSoundBoard.getSoundBoardPhotoLocation().contentEquals("none")) {
+        String photoLocation = this.currentSoundBoard.getSoundBoardPhotoLocation();
+
+        if (photoLocation.contentEquals("none")) {
             gridView.setBackgroundColor(Color.BLACK);
         } else {
-            Bitmap bitmap = BitmapFactory.decodeFile(this.currentSoundBoard.getSoundBoardPhotoLocation());
-            Drawable draw = new BitmapDrawable(getResources(), bitmap);
+            Bitmap bitmap = BitmapFactory.decodeFile(photoLocation);
+            Bitmap bitmapOriented = orientBitmap(bitmap, photoLocation);
+            Drawable draw = new BitmapDrawable(getResources(), bitmapOriented);
             gridView.setBackground(draw);
         }
     }
@@ -181,9 +189,54 @@ public class SoundListActivity extends Activity {
         getWindowManager().getDefaultDisplay().getSize(size);
         int width = size.x;
         int height = size.y;
+   //     Matrix matrix = new Matrix();
+   //     matrix.postRotate(90);
+
+    //    Bitmap bmRotated = rotateBitmap(bitmap, orientation);
 
         Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, height, width, true);
+    //    Bitmap rotatedBitmap = Bitmap.createBitmap(scaledBitmap , 0, 0, scaledBitmap .getWidth(), scaledBitmap .getHeight(), matrix, true);
         return scaledBitmap;
+    }
+
+    public Bitmap orientBitmap(Bitmap bitmap, String path){
+        Bitmap orientedBitmap = null;
+
+/*        ExifInterface exif = null;
+        try {
+            exif = new ExifInterface(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION,
+                ExifInterface.ORIENTATION_UNDEFINED);
+
+
+        orientedBitmap = rotateBitmap(bitmap, orientation);
+*/
+
+      //  Bitmap myBitmap = getBitmap(imgFile.getAbsolutePath());
+        ExifInterface exif = null;
+        try {
+            exif = new ExifInterface(path);
+            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
+            Log.d("EXIF", "Exif: " + orientation);
+            Matrix matrix = new Matrix();
+            if (orientation == 6) {
+                matrix.postRotate(90);
+            }
+            else if (orientation == 3) {
+                matrix.postRotate(180);
+            }
+            else if (orientation == 8) {
+                matrix.postRotate(270);
+            }
+            orientedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true); // rotating bitmap
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return orientedBitmap;
     }
 
     @Override
@@ -240,11 +293,14 @@ public class SoundListActivity extends Activity {
             }
         }
 
+
         String photoID = util.generateUUID();
         String filepath = this.context.getFilesDir() + File.separator + photoID + ".jpg";
         File file = new File(filepath);
         filepathTempPhoto = filepath;
         FileOutputStream out = null;
+
+
 
         Bitmap bitmap = this.scaleBitmap(bm);
 
@@ -254,7 +310,12 @@ public class SoundListActivity extends Activity {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+
+
+
+
+        finally {
             try {
                 if (out != null) {
                     out.close();
