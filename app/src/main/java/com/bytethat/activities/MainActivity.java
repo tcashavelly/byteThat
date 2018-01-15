@@ -55,8 +55,6 @@ public class MainActivity extends Activity {
 
         mInterstital = new InterstitialAd(this);
         mInterstital.setAdUnitId("ca-app-pub-3057749752423169/5037232130");
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mInterstital.loadAd(adRequest);
         db = new DatabaseHelper(getApplicationContext());
         util = new Utilities(this.getApplicationContext());
 
@@ -87,9 +85,6 @@ public class MainActivity extends Activity {
         gridView.setBackgroundColor(Color.BLACK);
         gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridView.getSelector().setAlpha(100);
-       // if(mInterstital.isLoaded()){
-            mInterstital.show();
-      //  }
 
     }
 

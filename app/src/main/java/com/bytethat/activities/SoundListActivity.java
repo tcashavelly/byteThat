@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -15,6 +16,8 @@ import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+
+import com.bytethat.Manifest;
 import com.bytethat.R;
 import com.bytethat.database.DatabaseHelper;
 import com.bytethat.database.Utilities;
@@ -25,6 +28,8 @@ import com.bytethat.datamodel.SoundListType;
 import com.bytethat.datamodel.SoundType;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -109,6 +114,11 @@ public class SoundListActivity extends Activity {
         this.workingSoundBoard = getIntent().getExtras().getInt("CurrentSB");
         this.currentSoundBoardId = (String) (extras != null ? extras.get("SoundboardId") : "nothing passed in");
         this.util = (Utilities) (extras != null ? extras.get("Util") : "nothing passed in");
+
+        ActivityCompat.requestPermissions(SoundListActivity.this,
+                new String[]{android.Manifest.permission.RECORD_AUDIO},
+                1);
+
 
         super.onCreate(icicle);
         db = new DatabaseHelper(util.getContext());

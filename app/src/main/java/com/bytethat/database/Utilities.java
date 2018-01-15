@@ -118,13 +118,4 @@ public class Utilities implements Serializable {
         return newSound;
     }
 
-    public boolean newStart(){
-        boolean check = false;
-
-
-
-        return check;
-
-    }
-
 }
